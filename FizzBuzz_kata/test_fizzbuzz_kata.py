@@ -2,6 +2,7 @@ import pytest
 
 from FizzBuzz_kata import fizzbuzz
 
+BUZZ = "buzz"
 FIZZ = "fizz"
 
 
@@ -14,11 +15,6 @@ class TestFizzBuzzShould:
     def test_return_fizz_when_fizzbuzz_number_3(self, given):
         assert fizzbuzz.fizzbuzz(given) == FIZZ
 
-    def test_return_buzz_when_fizzbuzz_number_5(self):
-        assert fizzbuzz.fizzbuzz(5) == "buzz"
-
-    def test_return_buzz_when_fizzbuzz_number_10(self):
-        assert fizzbuzz.fizzbuzz(10) == "buzz"
-
-    def test_return_buzz_when_fizzbuzz_number_20(self):
-        assert fizzbuzz.fizzbuzz(20) == "buzz"
+    @pytest.mark.parametrize("given", [5, 10, 20])
+    def test_return_fizz_when_fizzbuzz_number_5(self, given):
+        assert fizzbuzz.fizzbuzz(given) == BUZZ
