@@ -17,7 +17,7 @@ class TestFizzBuzzShould:
         assert fizzbuzz.fizzbuzz(given) == FIZZ
 
     @pytest.mark.parametrize("given", [5, 10, 20])
-    def test_return_fizz_when_fizzbuzz_number_5(self, given):
+    def test_return_buzz_when_fizzbuzz_number_5(self, given):
         assert fizzbuzz.fizzbuzz(given) == BUZZ
 
     @pytest.mark.parametrize("given", [0, 15, 30, 45])

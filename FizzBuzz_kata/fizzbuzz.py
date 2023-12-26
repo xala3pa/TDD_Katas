@@ -1,14 +1,13 @@
-def fizzbuzz(num: int) -> str:
+def fizzbuzz(num):
     if not isinstance(num, int):
         raise TypeError("Input must be an integer")
 
-    if num % 3 == 0 and num % 5 == 0:
-        return "fizzbuzz"
+    result = ""
     if num % 3 == 0:
-        return "fizz"
+        result += "fizz"
     if num % 5 == 0:
-        return "buzz"
-    return str(num)
+        result += "buzz"
+    return result or str(num)
 
 
 print(*[fizzbuzz(i) for i in range(1, 101)], sep='\n')
