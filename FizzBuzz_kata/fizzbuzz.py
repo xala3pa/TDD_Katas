@@ -1,4 +1,7 @@
 def fizzbuzz(num: int) -> str:
+    if not isinstance(num, int):
+        raise TypeError("Input must be an integer")
+
     if num % 3 == 0 and num % 5 == 0:
         return "fizzbuzz"
     if num % 3 == 0:

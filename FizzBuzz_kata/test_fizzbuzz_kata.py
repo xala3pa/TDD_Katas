@@ -24,3 +24,10 @@ class TestFizzBuzzShould:
     def test_return_fizzbuzz_when_fizzbuzz_number_15(self, given):
         assert fizzbuzz.fizzbuzz(given) == FIZZBUZZ
 
+    def test_raise_exception_with_string_input(self):
+        with pytest.raises(TypeError, match="Input must be an integer"):
+            fizzbuzz.fizzbuzz("invalid_input")
+
+    def test_raise_exception_with_non_integer_input(self):
+        with pytest.raises(TypeError, match="Input must be an integer"):
+            fizzbuzz.fizzbuzz(3.14)
