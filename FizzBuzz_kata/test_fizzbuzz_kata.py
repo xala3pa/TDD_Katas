@@ -16,3 +16,6 @@ class TestFizzBuzzShould:
 
     def test_return_buzz_when_fizzbuzz_number_5(self):
         assert fizzbuzz.fizzbuzz(5) == "buzz"
+
+    def test_return_buzz_when_fizzbuzz_number_10(self):
+        assert fizzbuzz.fizzbuzz(10) == "buzz"
