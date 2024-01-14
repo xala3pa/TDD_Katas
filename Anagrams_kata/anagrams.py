@@ -1,2 +1,4 @@
-def generate_anagrams(param):
-    return [""]
+def generate_anagrams(word):
+    if len(word) == 0:
+        return ['']
+    return ["a"]
