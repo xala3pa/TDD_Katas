@@ -1,4 +1,3 @@
 def generate_anagrams(word):
-    if len(word) == 0:
-        return ['']
-    return [word]
+    if len(word) <= 1:
+        return [word]
