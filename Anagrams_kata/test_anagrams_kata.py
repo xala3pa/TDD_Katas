@@ -8,3 +8,6 @@ class TestAnagrams:
 
     def test_return_a_when_generate_anagram_of_a(self):
         assert anagrams.generate_anagrams('a') == ['a']
+
+    def test_return_b_when_generate_anagram_of_b(self):
+        assert anagrams.generate_anagrams('b') == ['b']
