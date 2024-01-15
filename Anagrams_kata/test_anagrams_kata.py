@@ -14,3 +14,6 @@ class TestAnagrams:
 
     def test_return_all_anagrams_when_generate_anagram_of_ab(self):
         assert anagrams.generate_anagrams('ab') == ['ab', 'ba']
+
+    def test_return_all_anagrams_when_generate_anagram_of_abc(self):
+        assert anagrams.generate_anagrams("abc") == ["abc", "acb", "bac", "bca", "cab", "cba"]

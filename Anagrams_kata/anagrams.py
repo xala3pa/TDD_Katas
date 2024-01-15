@@ -1,14 +1,9 @@
-from itertools import permutations
-
-
-def generate_anagrams(word):
-    if len(word) <= 1:
-        return [word]
-
-    anagrams_set = set()
-
-    for perm in permutations(word):
-        anagram = ''.join(perm)
-        anagrams_set.add(anagram)
-
-    return sorted(list(anagrams_set))
+def generate_anagrams(s):
+    if len(s) <= 1:
+        return [s]
+    else:
+        anagrams = []
+        for i, letter in enumerate(s):
+            for perm in generate_anagrams(s[:i] + s[i + 1:]):
+                anagrams.append(letter + perm)
+        return anagrams
