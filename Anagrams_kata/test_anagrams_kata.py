@@ -17,3 +17,12 @@ class TestAnagrams:
 
     def test_return_all_anagrams_when_generate_anagram_of_abc(self):
         assert anagrams.generate_anagrams("abc") == ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+    def test_return_all_anagrams_when_generate_anagram_of_biro(self):
+        expected_anagrams = ["biro", "bior", "brio", "broi", "boir", "bori",
+                             "ibro", "ibor", "irbo", "irob", "iobr", "iorb",
+                             "rbio", "rboi", "ribo", "riob", "roib", "robi",
+                             "obir", "obri", "oibr", "oirb", "orbi", "orib"]
+
+        result = anagrams.generate_anagrams("biro")
+        assert set(result) == set(expected_anagrams)

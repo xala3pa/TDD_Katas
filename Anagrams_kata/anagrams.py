@@ -1,9 +1,9 @@
-def generate_anagrams(s):
-    if len(s) <= 1:
-        return [s]
+def generate_anagrams(word):
+    if len(word) <= 1:
+        return [word]
     else:
         anagrams = []
-        for i, letter in enumerate(s):
-            for perm in generate_anagrams(s[:i] + s[i + 1:]):
+        for i, letter in enumerate(word):
+            for perm in generate_anagrams(word[:i] + word[i + 1:]):
                 anagrams.append(letter + perm)
         return anagrams
