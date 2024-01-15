@@ -11,3 +11,6 @@ class TestAnagrams:
 
     def test_return_b_when_generate_anagram_of_b(self):
         assert anagrams.generate_anagrams('b') == ['b']
+
+    def test_return_all_anagrams_when_generate_anagram_of_ab(self):
+        assert anagrams.generate_anagrams('ab') == ['ab', 'ba']
