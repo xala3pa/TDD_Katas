@@ -1,8 +1,7 @@
 def convert_to_roman(arabic_number):
-    if arabic_number == 5:
-        return "V"
-    if arabic_number == 6:
-        return "VI"
-    if arabic_number == 7:
-        return "VII"
-    return "I" * arabic_number
+    roman_number = ""
+    if arabic_number >= 5:
+        roman_number += "V"
+        arabic_number -= 5
+    roman_number += "I" * arabic_number
+    return roman_number
