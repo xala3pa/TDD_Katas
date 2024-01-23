@@ -1,2 +1,4 @@
 def convert_to_roman(arabic_number):
-    return "I"
+    if arabic_number == 1:
+        return "I"
+    return "II"
